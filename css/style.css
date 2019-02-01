@@ -2,6 +2,7 @@
     https://www.uplabs.com/posts/free-free-blogly-theme
  */
 @import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500');
 
 * {
     margin: 0;
@@ -16,9 +17,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .primary-header__title {
+    width: 100%;
+    text-align: center;
     font-size: 48px;
     color: rgba(0, 0, 0, .87);
     font-family: 'Anonymous Pro', monospace;
@@ -38,6 +42,7 @@
 }
 
 .secundary-introduce {
+    margin-top: 16px;
     width: 100%;
 }
 
@@ -54,4 +59,117 @@
     height: 300px;
     background-color: #222222;
 }
+
+.posts-primary {
+    width: 100%;
+}
+
+.posts-primary__wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 16px;
+}
+
+.posts-primary__post {
+    flex: 1;
+    /*width: 320px;*/
+    background-color: #FFFFFF;
+    padding: 16px 12px;
+    height: auto;
+    margin: 8px;
+    border: 1px solid #EEEEEE;
+    /*box-shadow: 0 0 2px 0 rgba(0, 0, 0, .14), 0 2px 2px 0 rgba(0, 0, 0, .12), 0 1px 3px 0 rgba(0, 0, 0, .20);*/
+}
+
+.posts-primary__category a {
+    padding: 8px;
+    border-radius: 2px;
+    background-color: #EEEEEE;
+    text-transform: uppercase;
+    color: #222222;
+    font-size: 12px;
+    text-decoration: none;
+    font-family: 'Anonymous Pro', monospace;
+}
+
+.posts-primary__title {
+    padding-top: 16px;
+    font-size: 22px;
+    color: rgba(0, 0, 0, .87);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.posts-primary__button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.posts-primary__read-more {
+    background-color: transparent;
+    border: none;
+    color: rgba(0, 0, 0, .87);
+    padding: 8px 12px;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 180ms ease-in;
+}
+
+.posts-primary__read-more:hover {
+    background-color: rgba(0, 0, 0, .08);
+    /*border: none;*/
+    /*color: rgba(0, 0, 0, .87);*/
+    /*font-weight: 500;*/
+    /*font-family: 'Montserrat', sans-serif;*/
+}
+
+.posts-primary__info {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 8px;
+}
+
+.posts-primary__author {
+    font-size: 12px;
+}
+
+.posts-primary__date {
+    font-size: 12px;
+}
+
+.primary-menu {
+    min-width: 300px;
+    width: 960px;
+}
+
+.primary-menu__list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.primary-menu__list li {
+    display: inline;
+}
+
+.primary-menu__list a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, .87);
+    padding: 8px 12px;
+    border-radius: 16px;
+    text-transform: uppercase;
+    transition: background-color 180ms ease-in-out;
+}
+
+.primary-menu__list a:hover {
+    background-color: #EEEEEE;
+}
+
 
