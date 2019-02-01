@@ -19,18 +19,9 @@
 
 </section>
 
-<?php //get_template_part('sponsors', 'primary'); ?>
-
-<?php get_sidebar(); ?>
+<h3><?php single_cat_title(); ?></h3>
 
 <?php get_template_part('posts/posts', 'primary'); ?>
-
-<section class="secundary-introduce">
-    <section class="secundary-introduce__wrapper">
-
-    </section>
-</section>
-
 
 <?php get_footer(); ?>
 

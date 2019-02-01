@@ -7,7 +7,7 @@
 
     <nav class="primary-menu">
         <ul class="primary-menu__list">
-<!--            <li><a href="--><?//= home_url('/'); ?><!--">Home</a></li>-->
+            <li><a href="<?= home_url('/'); ?>">Home</a></li>
             <?php wp_list_pages([
                 'post_type' => 'page',
                 'title_li' => '',
