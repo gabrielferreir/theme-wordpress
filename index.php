@@ -19,6 +19,8 @@
 
 </section>
 
+<button class="ui-button">TESTE</button>
+
 <?php //get_template_part('sponsors', 'primary'); ?>
 
 <?php get_sidebar(); ?>

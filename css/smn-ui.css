@@ -1,0 +1,356 @@
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+*, *::before, *::after {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+*:not(font) {
+  font-family: "Roboto", sans-serif;
+}
+
+html, body {
+  word-wrap: break-word;
+  height: 100%;
+}
+
+pre {
+  font-family: monospace;
+}
+
+img, svg {
+  max-width: 100%;
+}
+
+p {
+  margin: 16px 0;
+}
+
+input,
+textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
+:link {
+  text-decoration: none;
+}
+:link:hover {
+  text-decoration: underline;
+}
+
+/* Icons*/
+.material-icons {
+  /* Rules for sizing the icon. */
+  /* Rules for using icons as black on a light background. */
+  /* Rules for using icons as white on a dark background. */
+}
+.material-icons.s-18 {
+  font-size: 18px;
+}
+.material-icons.s-24 {
+  font-size: 24px;
+}
+.material-icons.s-36 {
+  font-size: 36px;
+}
+.material-icons.s-48 {
+  font-size: 48px;
+}
+.material-icons.light {
+  color: rgba(0, 0, 0, 0.54);
+}
+.material-icons.light.inactive {
+  color: rgba(0, 0, 0, 0.26);
+}
+.material-icons.dark {
+  color: white;
+}
+.material-icons.dark.inactive {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.notransition, .notransition * {
+  transition: none !important;
+}
+
+/* https://material.io/guidelines/motion/duration-easing.html#duration-easing-natural-easing-curves */
+/* Inspired by https://github.com/nilskaspersson/Google-Material-UI-Color-Palette */
+/* https://material.io/guidelines/resources/shadows.html */
+.ui-button-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.ui-button-container .ui-button {
+  margin: 2px 0;
+  min-width: unset;
+}
+.ui-button-container .ui-button:not(.full) {
+  margin-right: 4px;
+  margin-left: 0;
+}
+.ui-button-container.align-right {
+  justify-content: flex-end;
+}
+.ui-button-container.align-right .ui-button:not(.full) {
+  margin-left: 4px;
+  margin-right: 0;
+}
+.ui-button-container.cover {
+  padding: 12px 16px;
+  justify-content: flex-end;
+}
+.ui-button-container.cover.align-left {
+  justify-content: flex-start;
+}
+.ui-button-container.cover .ui-button {
+  margin-right: 0;
+}
+.ui-button-container.cover .ui-button:not(.full) + .ui-button:not(.full) {
+  margin-left: 4px;
+}
+
+.ui-fab-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 60px;
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2;
+}
+@media (max-width: 375px), only screen and (min-width: 376px) and (max-width: 763px) {
+  .ui-fab-container {
+    right: 10px;
+    bottom: 10px;
+  }
+}
+.ui-fab-container .ui-button.mini:not(:last-child) {
+  margin-right: 13px;
+}
+.ui-fab-container.hide .ui-button {
+  transform: scale(0);
+}
+
+.ui-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  min-height: 36px;
+  min-width: 64px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  transform: scale(1);
+  transition: transform 0.28s cubic-bezier(0, 0, 0.2, 1), color 0.28s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.28s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
+}
+.ui-button:hover {
+  text-decoration: none;
+}
+.ui-button::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0;
+  transition: opacity 280ms cubic-bezier(0, 0, 0.2, 1);
+  border-radius: 4px;
+}
+.ui-button:focus::before {
+  opacity: 0.1;
+}
+.ui-button:hover:not(:disabled)::before {
+  opacity: 0.08;
+}
+.ui-button:active:not([uiRipple])::before {
+  opacity: 0.12;
+}
+.ui-button i {
+  vertical-align: middle;
+}
+.ui-button:not(.icon):not(.fab) i {
+  margin-left: -4px;
+  margin-right: 8px;
+}
+.ui-button.full {
+  width: 100%;
+}
+.ui-button.raised:not(:disabled) {
+  box-shadow: 0 0 4px 0 rgba(0,0,0,.14), 0 3px 4px 0 rgba(0,0,0,.12), 0 1px 5px 0 rgba(0,0,0,.20);
+}
+.ui-button.raised:not(:disabled):active {
+  box-shadow: 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 3px rgba(0,0,0,.12), 0 4px 15px 0 rgba(0,0,0,.20);
+}
+.ui-button.outline {
+  border: 1px solid;
+  background: transparent;
+}
+.ui-button.flat {
+  background-color: transparent;
+}
+.ui-button.flat:focus {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+.ui-button.flat:active {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.ui-button.icon, .ui-button.fab {
+  border-radius: 50%;
+  padding-left: 0;
+  padding-right: 0;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+}
+.ui-button.icon::before, .ui-button.fab::before {
+  border-radius: 50%;
+}
+.ui-button.icon::before {
+  transition: transform 0.195s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(0);
+}
+.ui-button.icon:focus::before {
+  transform: scale(1);
+}
+.ui-button.icon.square {
+  border-radius: 0;
+}
+.ui-button.icon.square::before {
+  border-radius: 0;
+  transition: none;
+}
+.ui-button.fab {
+  width: 56px;
+  height: 56px;
+  min-height: 56px;
+  margin: 5px;
+}
+.ui-button.fab.hide {
+  transform: scale(0);
+}
+.ui-button.fab.mini {
+  width: 40px;
+  height: 40px;
+  min-height: 40px;
+}
+.ui-button.fab:not(:disabled) {
+  box-shadow: 0 0 4px 0 rgba(0,0,0,.14), 0 3px 4px 0 rgba(0,0,0,.12), 0 1px 5px 0 rgba(0,0,0,.20), inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+.ui-button.fab:not(:disabled):active {
+  box-shadow: 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 3px rgba(0,0,0,.12), 0 4px 15px 0 rgba(0,0,0,.20), inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+.ui-button:disabled {
+  background-color: rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.26);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+.ui-button:disabled.flat, .ui-button:disabled.outline {
+  background-color: transparent;
+}
+.ui-button .badge {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #e0e0e0;
+  color: black;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 11px;
+  font-size: 11px;
+  line-height: 21px;
+  z-index: 1;
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.ui-button .badge.hide {
+  transform: scale(0);
+}
+.ui-button .badge.small {
+  width: 10px;
+  height: 10px;
+}
+.ui-button .icon {
+  margin-right: -12px;
+  float: right;
+}
+.ui-button .icon i {
+  line-height: 8px;
+  padding-bottom: 2px;
+}
+.ui-button.success:not(:disabled) {
+  background-color: #43a047;
+  color: white;
+}
+.ui-button.success:not(:disabled) .ui-ripple-wave {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.ui-button.success:not(:disabled)::before {
+  background-color: white;
+}
+.ui-button.success:not(:disabled).flat, .ui-button.success:not(:disabled).outline {
+  background-color: transparent;
+  color: #43a047;
+}
+.ui-button.success:not(:disabled) ui-progress-radial.indeterminate .spinner-container .path {
+  stroke: white;
+}
+.ui-button.warning:not(:disabled) {
+  background-color: #ff9800;
+  color: black;
+}
+.ui-button.warning:not(:disabled) .ui-ripple-wave {
+  background-color: rgba(33, 33, 33, 0.1);
+}
+.ui-button.warning:not(:disabled)::before {
+  background-color: black;
+}
+.ui-button.warning:not(:disabled).flat, .ui-button.warning:not(:disabled).outline {
+  background-color: transparent;
+  color: #ff9800;
+}
+.ui-button.warning:not(:disabled) ui-progress-radial.indeterminate .spinner-container .path {
+  stroke: black;
+}
+.ui-button.error:not(:disabled) {
+  background-color: #f44336;
+  color: white;
+}
+.ui-button.error:not(:disabled) .ui-ripple-wave {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.ui-button.error:not(:disabled)::before {
+  background-color: white;
+}
+.ui-button.error:not(:disabled).flat, .ui-button.error:not(:disabled).outline {
+  background-color: transparent;
+  color: #f44336;
+}
+.ui-button.error:not(:disabled) ui-progress-radial.indeterminate .spinner-container .path {
+  stroke: white;
+}
+
+/* Inspired by https://github.com/nilskaspersson/Google-Material-UI-Color-Palette */
+/* https://material.io/guidelines/motion/duration-easing.html#duration-easing-natural-easing-curves */
+/* Inspired by https://github.com/nilskaspersson/Google-Material-UI-Color-Palette */
+/* https://material.io/guidelines/resources/shadows.html */
+
+/*# sourceMappingURL=smn-ui.css.map */
