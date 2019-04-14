@@ -15,26 +15,20 @@
 
 <?php get_header(); ?>
 
-<section class="primary-introduce">
-
-</section>
-
-<button class="ui-button">TESTE</button>
-
 <?php //get_template_part('sponsors', 'primary'); ?>
 
-<?php get_sidebar(); ?>
+<?php // get_sidebar(); ?>
 
 <?php get_template_part('posts/posts', 'primary'); ?>
 
-<section class="secundary-introduce">
-    <section class="secundary-introduce__wrapper">
+<!--<section class="secundary-introduce">-->
+<!--    <section class="secundary-introduce__wrapper">-->
+<!---->
+<!--    </section>-->
+<!--</section>-->
 
-    </section>
-</section>
 
-
-<?php get_footer(); ?>
+<?php  // get_footer(); ?>
 
 <?php wp_footer(); ?>
 
